@@ -1,0 +1,28 @@
+<!--Rock Paper Scissors game
+User can click on his choice, compure will select one then result will be displayed
+-->
+<html>
+<head><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+ <script type="text/javascript" src="app.js"></script>
+<link rel="stylesheet" href="rpc.css">
+</head>
+<body ng-app="rpcApp">
+      <h1>Rock Paper Scissors Game</h1> 
+    <div ng-controller="rpcController">
+       <div class="buttonWrap">
+        <button class="button" ng-click="playGame('Rock')">Rock</button>
+        <button class="button" ng-click="playGame('Paper')">Paper</button>
+        <button class="button" ng-click="playGame('Scissors')">Scissors</button>
+    </div>
+    <div class="result">
+        <p>Your Choice is: {{userChoice}}</p>
+        <p>Computer's Choice is: {{computerChoice}}</p>
+        <p>{{result}}</p>
+        <p>your count: {{win}}</p>
+        <p>computer count:{{lose}}</p>
+        <button ng-click="win=0;lose=0">Reset</button>
+      </div>  
+    </div>
+    
+</body>
+</html>
